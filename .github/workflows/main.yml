@@ -58,6 +58,9 @@ jobs:
           POSTGRES_DB: django_db
           DB_HOST: 127.0.0.1
           DB_PORT: 5432
+          SECRET_KEY: "django-insecure-test-key-for-github-actions-only"
+          DEBUG: "True"
+          ALLOWED_HOSTS: "localhost,127.0.0.1"
         run: |
           cd backend/
           python manage.py test
