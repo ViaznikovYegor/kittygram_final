@@ -2,16 +2,16 @@
 set -e
 
 echo "======================================="
-echo "🚀 Starting Kittygram Backend"
+echo "Starting Kittygram Backend"
 echo "======================================="
 
-echo "🔄 Applying database migrations..."
+echo "Applying database migrations..."
 python manage.py migrate --noinput
 
-echo "📦 Collecting static files..."
+echo "Collecting static files..."
 python manage.py collectstatic --noinput
 
-echo "✅ Initialization completed!"
+echo "Initialization completed!"
 echo "======================================="
 
 exec "$@"
