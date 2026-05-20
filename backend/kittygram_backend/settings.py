@@ -7,12 +7,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
-
-ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS if host.strip()]
-
-if not ALLOWED_HOSTS:
-    raise ValueError("❌ ALLOWED_HOSTS is not set in environment variables!")
+ALLOWED_HOSTS = ['localhost', '81.26.181.68', 'kittygramm.ru']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
